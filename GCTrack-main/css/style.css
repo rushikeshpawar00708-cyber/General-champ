@@ -1,0 +1,647 @@
+/* Game List */
+#gameList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.game-item {
+
+background: rgba(0, 0, 0, 0.6); /* Light dark black with reduced opacity */
+
+    border-radius: 15px;
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between; /* Align game info and button to opposite sides */
+    align-items: center; /* Vertically center align the items */
+    gap: 10px; /* Space between game info and button */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Darker, more intense shadow */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.game-item:hover {
+    transform: scale(1.05); /* Slightly bigger on hover */
+    background: rgba(255, 255, 255, 0.15); /* Darker hover background */
+}
+
+/* Game Info */
+.game-info {
+    font-size: 18px;
+    color: #ff9800; /* Warm golden color for the game name */
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Adding slight glow to text */
+}
+
+/* Remove Button */
+.remove-game {
+    background: #e74c3c; /* Red background for remove button */
+    color: white;
+    padding: 5px 10px; /* Smaller padding for the button */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 14px; /* Smaller font size */
+    width: auto; /* Button width adjusts to content */
+    height: 30px; /* Define height to make it more compact */
+}
+
+.remove-game:hover {
+    background: #c0392b; /* Darker red on hover */
+    transform: scale(1.1);
+}
+
+/* Add an animation for fade-in */
+.game-item.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional Styles for Game List and Button */
+.game-item {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.game-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly darker hover effect */
+}
+
+.remove-game {
+    font-size: 14px;
+    padding: 5px 12px;
+    background: #ff4d6d; /* A softer red color */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for button */
+}
+
+.remove-game:hover {
+    background: #e74c3c; /* A deeper red on hover */
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* General Styles for Student List */
+#studentList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.student-item {
+   background: rgba(0, 0, 0, 0.85); /* Dark black with high opacity */
+
+    border-radius: 15px;
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items in a row */
+    gap: 10px; /* Space between student info and button */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Darker shadow for a more intense 3D effect */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.student-item:hover {
+    transform: scale(1.05); /* Slightly bigger on hover */
+    background: rgba(255, 255, 255, 0.18); /* Darker hover background */
+}
+
+/* Styling for Student Info */
+.student-info {
+    font-size: 18px;
+    color: #ff9800; /* Warm golden color for the name */
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Slight glow effect */
+}
+
+/* Remove Button */
+.remove-student {
+    background: #e74c3c; /* Red background for remove button */
+    color: white;
+    padding: 5px 12px; /* Smaller button padding */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+    width: auto;
+    height: 30px;
+}
+
+.remove-student:hover {
+    background: #c0392b; /* Darker red on hover */
+    transform: scale(1.1);
+}
+
+/* Animation Effect for Student Item */
+.student-item.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Extra Styling for Hover Effect */
+.student-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Darker background on hover */
+}
+
+/* Add border for better definition */
+.student-item {
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Green +1 button */
+.update-btn:nth-child(1) {
+    background: #28a745;
+    color: white;
+}
+
+.update-btn:nth-child(1):hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Red -1 button */
+.update-btn:nth-child(2) {
+    background: #dc3545;
+    color: white;
+}
+
+.update-btn:nth-child(2):hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* Fade-in and Fade-out animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* Make the content scrollable if necessary */
+#scoreTableBody {
+    max-height: 400px; /* Limit height for the table */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: 100%;
+}
+
+
+
+
+
+
+/* Scoreboard container for styling and spacing */
+.scoreboard-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: #000 !important; /* Solid black background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important; /* Deep shadow for floating effect */
+    backdrop-filter: none; /* Remove blur effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; /* Ensure text is white on dark background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect to enhance floating feel */
+.scoreboard-container:hover {
+    transform: translateY(-10px); /* Lift the container */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.9) !important; /* More intense shadow */
+}
+
+/* Darker background for the scoreboard itself */
+.scoreboard {
+    background: rgba(0, 0, 0, 0.85); /* Darker black background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Scoreboard Table Styling */
+#scoreTableBody tr {
+    background: rgba(0, 0, 0, 0.75); /* Darker background for rows */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+    transition: all 0.3s ease;
+}
+
+#scoreTableBody tr:hover {
+    background: rgba(0, 0, 0, 0.85); /* Darker background on hover */
+}
+
+/* Table cell styling */
+td {
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Branch and Score Styling */
+td:first-child {
+    color: #ff9800; /* Orange color for branches */
+    font-weight: bold;
+}
+
+td:nth-child(2) {
+    color: #fff; /* White color for scores */
+}
+
+/* Action buttons (update score buttons) */
+.update-btn {
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Green +1 button */
+.update-btn:nth-child(1) {
+    background: #28a745;
+    color: white;
+}
+
+.update-btn:nth-child(1):hover {
+    background: #218838;
+    transform: scale(1.1);
+}
+
+/* Red -1 button */
+.update-btn:nth-child(2) {
+    background: #dc3545;
+    color: white;
+}
+
+.update-btn:nth-child(2):hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
+
+/* Fade-in and Fade-out animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select {
+    background: rgba(30, 30, 30, 0.7); /* Dark glassy effect */
+    color: #ffcc00; /* Soft yellow for visibility */
+    text-align: center;
+    padding: 12px;
+    border: 2px solid rgba(255, 204, 0, 0.5); /* Subtle golden border */
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.2); /* Soft glow effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    appearance: none; /* Removes default browser styling */
+    cursor: pointer;
+}
+
+/* On Click (Focus) Effect */
+select:focus {
+    background: rgba(20, 20, 20, 0.9); /* Darker for depth */
+    border-color: rgba(255, 204, 0, 0.7); /* More prominent gold */
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+}
+
+/* Dropdown Options Styling */
+select option {
+    background: rgba(20, 20, 20, 0.95); /* Deep black */
+    color: #ffcc00; /* Golden text */
+    font-size: 14px;
+    padding: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover Effect for Options */
+select option:hover {
+    background: rgba(255, 204, 0, 0.3); /* Light golden highlight */
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reset some default styles for better consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;  /* Dark background */
+  color: #f4f4f4;  /* Light text */
+  padding: 20px;
+}
+
+/* General styling for the contact section */
+.contact {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.article-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;  /* White text */
+}
+
+.mapbox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.mapbox iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: none;
+}
+
+/* Styling for the contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;  /* Dark background for form */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  /* Dark shadow */
+}
+
+.form-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;  /* White text for form title */
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 1rem;
+  border: 1px solid #444;  /* Dark border */
+  border-radius: 4px;
+  width: 100%;
+  background-color: #222;  /* Dark input background */
+  color: #f4f4f4;  /* Light text in inputs */
+}
+
+.form-input::placeholder {
+  color: #aaa;  /* Light placeholder text */
+}
+
+.form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #007bff;  /* Blue button */
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: not-allowed;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+.form-btn:disabled {
+  background-color: #555;  /* Disabled button with dark gray */
+}
+
+@media (max-width: 768px) {
+  /* For mobile responsiveness */
+  .mapbox iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .input-wrapper {
+    width: 100%;
+  }
+
+  .form-btn {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens like phones */
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+  }
+
+  .form-input {
+    font-size: 0.9rem;
+  }
+
+  .form-btn {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Social Icons Container */
+.social-container {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 1000;
+}
+
+/* Social Icons */
+.social-link ion-icon {
+  font-size: 28px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6); /* Slight background for visibility */
+  padding: 12px;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0, 119, 255, 0.7); /* Blue glow effect */
+}
+
+/* Hover Effect */
+.social-link ion-icon:hover {
+  color: #00ff00;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px rgba(0, 119, 255, 1); /* Stronger blue glow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .social-container {
+    bottom: 10px;
+    gap: 10px;
+  }
+  .social-link ion-icon {
+    font-size: 24px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 119, 255, 0.7);
+  }
+}
+
+
+
+
+
+
+

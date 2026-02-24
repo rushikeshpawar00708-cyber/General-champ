@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+   background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            transition: opacity 0.5s ease-in-out;
+        }
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.08); /* Slightly fainter white for a better glassy effect */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15), 0 0 40px rgba(255, 255, 255, 0.1) inset; /* Outer glow + inner glow */
+    backdrop-filter: blur(12px); /* Slightly increased blur for a smoother glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Stronger but subtle border for definition */
+    color: white; /* Ensuring text is clearly visible */
+    text-align: center; /* Makes content inside look well-aligned */
+}
+
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #fff;
+        }
+
+        th {
+            background: #ff4d6d;
+        }
+
+        td {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        input, select, button {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+ input, select {
+    background: rgba(255, 255, 255, 0.2);
+    color: #00ff99; /* Neon Green */
+    text-align: center;
+}
+
+button {
+    background: linear-gradient(135deg, #1e90ff, #0073e6); /* Smooth gradient */
+    color: #ffd700; /* Golden Yellow for premium look */
+    cursor: pointer;
+    padding: 12px 24px; /* Better spacing */
+    font-size: 16px; /* Readable text */
+    font-weight: bold;
+    border: none; /* Removes default border */
+    border-radius: 8px; /* Smooth rounded corners */
+    box-shadow: 0 4px 10px rgba(30, 144, 255, 0.4); /* Soft glow effect */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+button:hover {
+    background: linear-gradient(135deg, #0073e6, #005bb5); /* Darker blue transition */
+    transform: scale(1.08); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(30, 144, 255, 0.6); /* Increased glow */
+}
+
+/* Click (Active) Effect */
+button:active {
+    transform: scale(0.98); /* Slight press-down effect */
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.5);
+}
+
+/* Fade Out Effect */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">🏆 GC Scoreboard 🎯</h1>
+   <table>
+    <thead>
+        <tr>
+            <th>Branch</th>
+            <th>GC Points</th>
+        </tr>
+    </thead>
+    <tbody id="scoreTable">
+        <tr><td>🖥️ IT</td><td id="itScore">106</td></tr>
+        <tr><td>📡 ENTC</td><td id="entcScore">159</td></tr>
+        <tr><td>🏗️ CIVIL</td><td id="civilScore">178</td></tr>
+        <tr><td>🔧 MECHANICAL</td><td id="mechScore">126</td></tr>
+        <tr><td>⚡ ELECTRICAL</td><td id="elecScore">82</td></tr>
+    </tbody>
+</table>
+
+
+        <h2>🏏 Register for a Game 🥊</h2>
+        <input type="text" id="studentName" placeholder="Enter your name">
+        
+        <select id="branchSelect">
+            <option disabled selected>Select your branch</option>
+            <option value="IT">IT</option>
+            <option value="ENTC">ENTC</option>
+            <option value="Civil">Civil</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Electrical">Electrical</option>
+        </select>
+
+        <select id="gameSelect"></select>
+        <button id="registerBtn">Register</button>
+
+       <button id="backBtn" class="back-btn">🔙</button>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("backBtn").addEventListener("click", function (event) {
+                event.preventDefault();
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 500);
+            });
+        });
+    </script>
+
+    <script src="js/student.js"></script>
+    
+    
+    <!-- CONTACT SECTION -->
+<article class="contact" data-page="contact">
+  <header>
+    <h2 class="h2 article-title">Feed back</h2>
+  </header>
+
+  <section class="mapbox" data-mapbox>
+    <figure>
+      <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.113403166928!2d74.18276376443018!3d17.308564906934325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z17.308565NID74.182764E!5e0!3m2!1sen!2sin!4v1709112345678!5m2!1sen!2sin"
+  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+</iframe>
+
+    </figure>
+  </section>
+
+  <section class="contact-form">
+    <h3 class="h3 form-title">Contact Form</h3>
+    <form action="#" class="form" data-form>
+      <div class="input-wrapper">
+        <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+        <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+      </div>
+      <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+      <button class="form-btn" type="submit" disabled data-form-btn>
+        <ion-icon name="paper-plane"></ion-icon>
+        <span>Send Message</span>
+      </button>
+    </form>
+  </section>
+</article>
+
+<!-- Custom JS -->
+<script src="./assets/js/script.js"></script>
+
+<!-- Ionicons link -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".form");
+    const formButton = document.querySelector(".form-btn");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent page refresh
+
+      // Display a success message
+      alert("Message sent successfully!"); // Pop-up alert
+
+      // Reset form fields
+      form.reset();
+
+      // Disable the button again after sending
+      formButton.setAttribute("disabled", "true");
+    });
+
+    // Enable button when all fields are filled
+    const inputs = form.querySelectorAll("[data-form-input]");
+    inputs.forEach(input => {
+      input.addEventListener("input", function () {
+        formButton.disabled = !Array.from(inputs).every(i => i.value.trim() !== "");
+      });
+    });
+  });
+</script>
+
+    
+    
+</body>
+</html>
